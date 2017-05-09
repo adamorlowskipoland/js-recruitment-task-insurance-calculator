@@ -27,7 +27,10 @@ body {
     width: 60%;
     margin: 0 auto;
     padding: 1rem;
+    border-radius: 15px;
 }
 
-.header {
+label {
+    display: block;
+    margin: 2rem;
 }
