@@ -1,2 +1,2 @@
-# js-recruitment-tast-insurance-calculator
+# js-recruitment-task-insurance-calculator
 Insurance calculator
