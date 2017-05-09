@@ -18,7 +18,7 @@ body {
     background: url(https://s1.cdn.autoevolution.com/images/news/what-to-do-after-witnessing-a-car-accident-98998_1.jpg);
     background-repeat: no-repeat;
     background-position: top center;
-    /*filter: grayscale(80%);*/
+    filter: grayscale(20%);
     padding: 2rem; 
     height: 1000px;
 }

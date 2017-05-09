@@ -16,41 +16,42 @@
             <form action="" id="form">
 
 
-                <label for="stawki">Sumy ubezpieczenia - stawki
-                    <select name="stawki" id="stawki">
-                        <option value="1000">100­ - 1000: 20 PLN</option>
-                        <option value="3000">1001­ - 3000: 70 PLN</option>
-                        <option value="6000">3001 - ­6000: 130 PLN</option>
-                        <option value="9000">6001­ - 9000: 180 PLN</option>
-                        <option value="20000">9001­ - 20000: 200 PLN</option>
+                <label for="rates">Sumy ubezpieczenia - stawki
+                    <select name="rates" id="rates">
+                        <option value="20">100­ - 1000: 20 PLN</option>
+                        <option value="70">1001­ - 3000: 70 PLN</option>
+                        <option value="130">3001 - ­6000: 130 PLN</option>
+                        <option value="180">6001­ - 9000: 180 PLN</option>
+                        <option value="200">9001­ - 20000: 200 PLN</option>
                     </select>
                 </label>
 
-                <label for="formyPlatnosci">Moliwe formy płatności
-                    <select name="formy-platnosci" id="formyPlatnosci">
-                        <option value="2">jednorazowa</option>
-                        <option value="2raty">2 raty</option>
+                <label for="paymentForms">Moliwe formy płatności
+                    <select name="payment-forms-platnosci" id="paymentForms">
+                        <option value="1">jednorazowa</option>
+                        <option value="2">2 raty</option>
                         <option value="4">4 raty</option>
                     </select>
                 </label>
 
-                <label for="znizki">Moliwe zniżki
-                    <select name="znizki" id="znizki">
+                <label for="discount">Moliwe zniżki
+                    <select name="discount" id="discount">
                         <option value="0">-</option>
                         <option value="5">bezszkodowe jazda - 5%</option>
                     </select>
                 </label>
 
 
-                <label for="zwyzki">Moliwe zwyżki
-                    <select name="zwyzki" id="zwyzki">
+                <label for="gainers">Moliwe zwyżki
+                    <select name="gainers" id="gainers">
                         <option value="0">-</option>
                         <option value="8">za wystąpienie szkody w okresie ubezpiczenie - 8%</option>
                     </select>
                 </label>
 
-                <label for="skladka">Składka PLN <input type="text" id="skladka" value="0" readonly></label>
+                <label for="contribution">Składka PLN <input type="text" id="contribution" value="0" readonly></label>
 
+                <button class="btn" type="reset">Reset</button>
                 <button class="btn" type="submit">Oblicz</button>
                 
             </form>
