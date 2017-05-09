@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
     background: #518acc; /* Old browsers */
@@ -11,5 +13,21 @@ body {
 
 .wrapper {
     text-align: center;
+    background: url(http://1.bp.blogspot.com/-0KDAJal2so0/Th9FOws0p4I/AAAAAAAAC3Y/D9ZAmA1ql_c/s1600/Car+Accident+37.JPG);
+    background-repeat: no-repeat;
+    background-position: top center;
+    filter: grayscale(80%);
+    padding: 1rem; 
+    
 }
 
+.calculator {
+    background: #fff;
+    opacity: .85;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.header {
+}
