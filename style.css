@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    /*margin: 0;
+    padding: 0;*/
 }
 body {
     background: #518acc; /* Old browsers */
@@ -9,16 +9,18 @@ body {
     background: -webkit-linear-gradient(left, #4cb4f6 8%, #007FCC 85%, #0270b2); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #4cb4f6 8%, #007FCC 85%, #0270b2); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#518acc', endColorstr='#9ec5e3',GradientType=1 );  /* IE6-9 */
+    margin: 0;
 }
 
 .wrapper {
     text-align: center;
-    background: url(http://1.bp.blogspot.com/-0KDAJal2so0/Th9FOws0p4I/AAAAAAAAC3Y/D9ZAmA1ql_c/s1600/Car+Accident+37.JPG);
+    /*background: url(http://1.bp.blogspot.com/-0KDAJal2so0/Th9FOws0p4I/AAAAAAAAC3Y/D9ZAmA1ql_c/s1600/Car+Accident+37.JPG);*/
+    background: url(https://s1.cdn.autoevolution.com/images/news/what-to-do-after-witnessing-a-car-accident-98998_1.jpg);
     background-repeat: no-repeat;
     background-position: top center;
-    filter: grayscale(80%);
-    padding: 1rem; 
-    
+    /*filter: grayscale(80%);*/
+    padding: 2rem; 
+    height: 1000px;
 }
 
 .calculator {
@@ -33,4 +35,9 @@ body {
 label {
     display: block;
     margin: 2rem;
+}
+
+input {
+    padding: .3rem;
+    text-align: right;
 }

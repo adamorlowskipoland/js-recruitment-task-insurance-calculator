@@ -12,7 +12,8 @@
     <div class="wrapper">
         <div class="calculator">
             <head class="header"><h1>Calculate your insurance</h1></head>
-            <form action="">
+
+            <form action="" id="form">
 
 
                 <label for="stawki">Sumy ubezpieczenia - stawki
@@ -48,7 +49,9 @@
                     </select>
                 </label>
 
+                <label for="skladka">Składka PLN <input type="text" id="skladka" value="0" readonly></label>
 
+                <button class="btn" type="submit">Oblicz</button>
                 
             </form>
         </div>
