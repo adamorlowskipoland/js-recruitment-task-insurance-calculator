@@ -1,9 +1,9 @@
 const model = {
-    "contributionInput" : document.getElementById('contribution'),
-    "ratesInput" : document.getElementById('rates'),
-    "paymentFormsInput" : document.getElementById('paymentForms'),
-    "discountInput" : document.getElementById('discount'),
-    "gainersInput" : document.getElementById('gainers')
+    "rates" : 0,
+    "paymentForms" : 0,
+    "discount" : 0,
+    "gainers" : 0,
+    "contribution" : 0,
 }
 
 
@@ -12,38 +12,30 @@ const model = {
 
 
 const controller = {
-    "rates" : 0,
-    "paymentForms" : 0,
-    "discount" : 0,
-    "gainers" : 0,
-    "contribution" : 0,
+// DOM elements
+    "contributionInput" : document.getElementById('contribution'),
+    "ratesInput" : document.getElementById('rates'),
+    "paymentFormsInput" : document.getElementById('paymentForms'),
+    "discountInput" : document.getElementById('discount'),
+    "gainersInput" : document.getElementById('gainers'),
 
+// settings values to model elements from DOM elements, and calling countingContribution function
     "setValues" : function() {
-        this.rates = parseInt(model.ratesInput.value);
-        this.paymentForms = parseInt(model.paymentFormsInput.value);
-        this.discount = parseInt(model.discountInput.value);
-        this.gainers = parseInt(model.gainersInput.value);
-
-
+        model.rates = parseInt(this.ratesInput.value);
+        model.paymentForms = parseInt(this.paymentFormsInput.value);
+        model.discount = parseInt(this.discountInput.value);
+        model.gainers = parseInt(this.gainersInput.value);
         this.countContribution();
     },
 
+// counting contribution and calling viewer for displaying
     "countContribution" : function() {
     // for counting contribution we take a rate, add counted discount or gainer number for payment method, then add counted discout number (negative digit), then add counted gainer number 
-        this.contribution = (this.rates + (this.rates * (this.paymentForms / 100)) + (this.rates * (this.discount / 100)) + (this.rates * (this.gainers / 100)));
-        console.log(this.contribution);
-
-
-
-        this.displayCost();
-    },
-
-    "displayCost" : function() {
-        model.contributionInput.value = this.contribution;
-        console.log(this.rates);
-        console.log(this.paymentForms);
-        console.log(this.discount);
-        console.log(this.gainers);
+        model.contribution = (model.rates + (model.rates * (model.paymentForms / 100)) + (model.rates * (model.discount / 100)) + (model.rates * (model.gainers / 100)));
+        console.log(model.contribution);
+        model.contribution = Math.ceil(model.contribution);
+        console.log(model.contribution);
+        viewer.displayCost(model.contribution);
     }
 }
 
@@ -53,14 +45,17 @@ const controller = {
 
 
 const viewer = {
-    
+// puts given value to displayOnly contribution input in a DOM
+    "displayCost" : function(countedContribution) {
+        controller.contributionInput.value = countedContribution;
+    },
+
+// sets event listener for submiting the form
     "eventListeners" : function() {
         const form = document.getElementById('form');
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             controller.setValues();
-
-
         });
     }
 }
