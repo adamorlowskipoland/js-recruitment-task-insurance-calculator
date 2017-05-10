@@ -41,3 +41,23 @@ input {
     padding: .3rem;
     text-align: right;
 }
+
+
+
+
+@media(max-width: 700px) {
+    .wrapper{
+        padding: 2rem;     
+    }
+    .calculator {
+        width: 100%;
+        padding: 0;
+    }
+    input, label, select, option {
+        font-size: 80%;
+    }
+    label {
+        display: block;
+        margin: .5rem;
+    }
+}
