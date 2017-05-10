@@ -25,9 +25,12 @@ const controller = {
 
 // counting contribution and calling viewer for displaying
     "countContribution" : function() {
-    // for counting contribution we take a rate, add counted discount or gainer number for payment method, then add counted discout number (negative digit), then add counted gainer number 
-        model.contribution = (model.rates + (model.rates * (model.paymentForms / 100)) + (model.rates * (model.discount / 100)) + (model.rates * (model.gainers / 100)));
+    // for counting contribution we take a rate, substract discoung, add gainers 
+        // model.contribution = (model.rates + (model.rates * (model.discount / 100)) + (model.rates * (model.paymentForms / 100)) + (model.rates * (model.gainers / 100)));
+        model.contribution = (model.rates * ((100 + model.discount) / 100)) * ((100 + model.paymentForms) / 100) * ((100 + model.gainers) / 100);
+        console.log(model.contribution);
         model.contribution = Math.ceil(model.contribution);
+        console.log(model.contribution);
         viewer.displayCost(model.contribution);
     }
 }
