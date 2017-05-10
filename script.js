@@ -16,11 +16,40 @@ const controller = {
 
 // settings values to model elements from DOM elements, and calling countingContribution function
     "setValues" : function() {
-        model.rates = parseInt(this.ratesInput.value);
+        model.rates = this.setRates(parseInt(this.ratesInput.value));
         model.paymentForms = parseInt(this.paymentFormsInput.value);
         model.discount = parseInt(this.discountInput.value);
         model.gainers = parseInt(this.gainersInput.value);
         this.countContribution();
+    },
+
+    "setRates" : function(ratesInputVal) {
+        var key = true;
+        switch (key) {
+            case (ratesInputVal > 9000 && ratesInputVal < 10001):
+                return 200;
+                break;
+                
+            case (ratesInputVal > 6000 && ratesInputVal < 9001):
+                return 180;
+                break;
+
+            case (ratesInputVal > 3000 && ratesInputVal < 6001):
+                return 130;
+                break;
+                
+            case (ratesInputVal > 1000 && ratesInputVal < 3001):
+                return 70;
+                break;
+                
+            case (ratesInputVal > 99 && ratesInputVal < 1001):
+                return 20;
+                break;
+                
+            default:
+                break;
+        }
+        
     },
 
 // counting contribution and calling viewer for displaying

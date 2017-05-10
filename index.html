@@ -12,24 +12,10 @@
     <div class="wrapper">
         <div class="calculator">
             <head class="header"><h1>Calculate your insurance</h1></head>
-
             <form action="" id="form">
-
-
                 <label for="rates">Suma ubezpieczenia 
-                    <input type="number" name="rates" min="10" value="1000" max="10000" id="rates">
+                    <input type="number" name="rates" min="100" value="1000" max="10000" id="rates">
                 </label>
-
-                <!--<label for="rates">Sumy ubezpieczenia - stawki
-                    <select name="rates" id="rates">
-                        <option value="20">100­ - 1000: 20 PLN</option>
-                        <option value="70">1001­ - 3000: 70 PLN</option>
-                        <option value="130">3001 - ­6000: 130 PLN</option>
-                        <option value="180">6001­ - 9000: 180 PLN</option>
-                        <option value="200">9001­ - 20000: 200 PLN</option>
-                    </select>
-                </label>-->
-
                 <label for="paymentForms">Moliwe formy płatności
                     <select name="payment-forms-platnosci" id="paymentForms">
                         <option value="-2">jednorazowa</option>
@@ -37,35 +23,24 @@
                         <option value="4">4 raty</option>
                     </select>
                 </label>
-
                 <label for="discount">Moliwe zniżki
                     <select name="discount" id="discount">
                         <option value="0">-</option>
                         <option value="-5">bezszkodowe jazda - 5%</option>
                     </select>
                 </label>
-
-
                 <label for="gainers">Moliwe zwyżki
                     <select name="gainers" id="gainers">
                         <option value="0">-</option>
                         <option value="8">za wystąpienie szkody w okresie ubezpiczenie - 8%</option>
                     </select>
                 </label>
-
                 <label for="contribution">Składka PLN <input type="text" id="contribution" value="0" readonly></label>
-
                 <button class="btn" type="reset">Reset</button>
                 <button class="btn" type="submit">Oblicz</button>
-                
             </form>
         </div>
     </div>
-
-
-
-
-
     <script src="script.js"></script>
 </body>
 </html>
