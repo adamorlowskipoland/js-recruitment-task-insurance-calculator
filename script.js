@@ -29,10 +29,9 @@ const controller = {
     },
 
     "countContribution" : function() {
-
+    // for counting contribution we take a rate, add counted discount or gainer number for payment method, then add counted discout number (negative digit), then add counted gainer number 
         this.contribution = (this.rates + (this.rates * (this.paymentForms / 100)) + (this.rates * (this.discount / 100)) + (this.rates * (this.gainers / 100)));
         console.log(this.contribution);
-        // (this.rates * (100 + this.discount)) * (100 + this.gainers)
 
 
 
