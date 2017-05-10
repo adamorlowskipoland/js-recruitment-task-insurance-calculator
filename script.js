@@ -6,11 +6,6 @@ const model = {
     "contribution" : 0,
 }
 
-
-
-
-
-
 const controller = {
 // DOM elements
     "contributionInput" : document.getElementById('contribution'),
@@ -39,11 +34,6 @@ const controller = {
     }
 }
 
-
-
-
-
-
 const viewer = {
 // puts given value to displayOnly contribution input in a DOM
     "displayCost" : function(countedContribution) {
@@ -59,6 +49,5 @@ const viewer = {
         });
     }
 }
-
 
 viewer.eventListeners();
