@@ -14,6 +14,10 @@ const controller = {
     "discountInput" : document.getElementById('discount'),
     "gainersInput" : document.getElementById('gainers'),
 
+    "form" : document.getElementById('form'),
+    "discount" : document.getElementById('discount'),
+    "gainers" : document.getElementById('gainers'),
+
 // settings values to model elements from DOM elements, and calling countingContribution function
     "setValues" : function() {
         model.rates = this.setRates(parseInt(this.ratesInput.value));
@@ -63,11 +67,26 @@ const controller = {
         viewer.displayCost(model.contribution);
     },
 
+
+
+// relation beetwen 2 selectbox disabled/enabled 
     "checkDiscount" : function(element) {
-        console.log(element.value);
+        if (element.value !== "0") {
+            controller.gainers.disabled = true;
+            console.log('it is not equal');
+        } else {
+            controller.gainers.disabled = false;
+            console.log('it is equal');
+        }
     },
     "checkGainer" : function(element) {
-        console.log(element.value);
+        if (element.value !== "0") {
+            controller.discount.disabled = true;
+            console.log('it is not equal');
+        } else {
+            controller.discount.disabled = false;
+            console.log('it is equal');
+        }
     }
 }
 
@@ -79,16 +98,16 @@ const viewer = {
 
 // sets event listener for submiting the form
     "eventListeners" : function() {
-        const form = document.getElementById('form');
+        const form = controller.form;
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             controller.setValues();
         });
-        const discount = document.getElementById('discount');
+        const discount = controller.discount;
         discount.addEventListener('change', function() {
             controller.checkDiscount(this);
         });
-        const gainers = document.getElementById('gainers');
+        const gainers = controller.gainers;
         gainers.addEventListener('change', function() {
             controller.checkGainer(this);
         });
