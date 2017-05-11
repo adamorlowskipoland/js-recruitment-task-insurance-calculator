@@ -61,9 +61,9 @@ const controller = {
     // for counting contribution we take a rate, substract discoung, add gainers 
         // model.contribution = (model.rates + (model.rates * (model.discount / 100)) + (model.rates * (model.paymentForms / 100)) + (model.rates * (model.gainers / 100)));
         model.contribution = (model.rates * ((100 + model.discount) / 100)) * ((100 + model.paymentForms) / 100) * ((100 + model.gainers) / 100);
-        console.log(model.contribution);
+        // console.log(model.contribution);
         model.contribution = Math.ceil(model.contribution);
-        console.log(model.contribution);
+        // console.log(model.contribution);
         viewer.displayCost(model.contribution);
     },
 
@@ -73,19 +73,15 @@ const controller = {
     "checkDiscount" : function(element) {
         if (element.value !== "0") {
             controller.gainers.disabled = true;
-            console.log('it is not equal');
         } else {
             controller.gainers.disabled = false;
-            console.log('it is equal');
         }
     },
     "checkGainer" : function(element) {
         if (element.value !== "0") {
             controller.discount.disabled = true;
-            console.log('it is not equal');
         } else {
             controller.discount.disabled = false;
-            console.log('it is equal');
         }
     }
 }
