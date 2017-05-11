@@ -61,6 +61,13 @@ const controller = {
         model.contribution = Math.ceil(model.contribution);
         console.log(model.contribution);
         viewer.displayCost(model.contribution);
+    },
+
+    "checkDiscount" : function(element) {
+        console.log(element.value);
+    },
+    "checkGainer" : function(element) {
+        console.log(element.value);
     }
 }
 
@@ -76,6 +83,14 @@ const viewer = {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             controller.setValues();
+        });
+        const discount = document.getElementById('discount');
+        discount.addEventListener('change', function() {
+            controller.checkDiscount(this);
+        });
+        const gainers = document.getElementById('gainers');
+        gainers.addEventListener('change', function() {
+            controller.checkGainer(this);
         });
     }
 }
